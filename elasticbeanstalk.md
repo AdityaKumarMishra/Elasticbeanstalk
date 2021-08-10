@@ -1,3 +1,6 @@
+# Elasticbeanstalk
+
+
 # Deploying a Application to AWS Elastic Beanstalk
 
 
@@ -37,13 +40,27 @@ The next thing we need to do is set up an IAM user. This will give us access to 
 It is also a good idea to have a separate IAM user with access to only the resources the user needs instead of using the default admin credentials for security purposes.
 On the home page, search for IAM and navigate to the *IAM home page*.
 
-
+![](/images/1.png)
 
 On the *IAM homepage*, under *AM Resources*,click on *Users: 0*
-.
+
+
+![](/images/2.png)
+
 After that, click *Add User*.You can fill out the user name of your choice and then select the checkbox for *Programmatic access*.
+
+
+![](/images/3.png)
+
 On the next screen, select *Attach existing policies directly* and then use the search box to search for *Administrator Access*.
+
+
+![](/images/4.png)
+
 On the next page, add a name tag so you can identify your user later from the list of IAM credentials:
+
+
+![](/images/5.png)
 
 Finally, on the review page, click on*Create User*.
 
@@ -71,29 +88,32 @@ You can find your AWS region on the top-right corner of the AWS account page whe
 Navigate to the elastic beanstalk home page and click Create New Application.
 
 
+![](/images/6.png)
+
 Fill out the new application form as necessary.
+
+
+![](/images/7.png)
 
 You will then see a page with the message *No environments currently exist for this application*. Create one now. Click on *Create one now*.
 Next, select *Web server environment*.
 
 
+![](/images/8.png)
 
 In the next section, change the Environment name to production-env. Leave the Domain blank. Then, under Base Configuration, select Preconfigured platform and choose Ruby from the dropdown. You can leave Application code on Sample application; then, go ahead and click Create environment. This will take some time, so be patient.
 
-
-
-
-
-
-
-
-
-
-
+![](/images/9.png)
 
 Once done, you should see a page that looks like this:
+
+![](/images/10.png)
+
 Find the URL provided after the environment ID. Click on it to check out the default Ruby app on elastic beanstalk. Very soon, your API will be running on the same URL.
 You can change the version label to something more meaningful:
+
+
+![](/images/11.png)
 
 Once Elasticbeanstalk has finished updating the environment, you can visit your environment URL to see your API running! 
 
